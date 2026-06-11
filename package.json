@@ -1,0 +1,35 @@
+{
+  "name": "astro-bootstrap-icons",
+  "version": "1.0.0",
+  "description": "Bootstrap Icons for Astro",
+  "main": "index.js",
+  "files": [
+    "icons/",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chanython/astro-bootstrap-icons.git"
+  },
+  "keywords": [
+    "astro",
+    "bootstrap",
+    "components",
+    "icons",
+    "svg"
+  ],
+  "author": "Chan Thongjerm (https://github.com/chanython)",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/chanython/astro-bootstrap-icons/issues"
+  },
+  "homepage": "https://github.com/chanython/astro-bootstrap-icons#readme",
+  "devDependencies": {
+    "bootstrap-icons": "^1.13.1"
+  }
+}
