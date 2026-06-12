@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Not available
 
+## [1.0.1] - 2026-06-12
+
+- Fix keywords in `package.json` for integration library
+
 ## [1.0.0] - 2026-06-12
 
 - Initial release of `astro-bootstrap-icons`
