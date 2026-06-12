@@ -17,10 +17,16 @@
   },
   "keywords": [
     "astro",
+    "astro-component",
+    "astro-integration",
     "bootstrap",
+    "component",
     "components",
+    "icon",
     "icons",
-    "svg"
+    "svg",
+    "ui",
+    "withastro"
   ],
   "author": "Chan Thongjerm (https://github.com/chanython)",
   "license": "MIT",
