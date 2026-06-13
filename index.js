@@ -14,15 +14,8 @@ import {
 
 /** @type {DirMap} */
 const dirMap = {
-  icons: 'icons'
+  icons: 'dist'
 }
-
-const componentScript = `---
-import type { HTMLAttributes } from 'astro/types'
-
-export type Props = HTMLAttributes<'svg'>
----
-`
 
 Object.keys(dirMap).forEach((dir) => {
   const files = readdirSync(`./node_modules/bootstrap-icons/${dir}`)
@@ -36,7 +29,9 @@ Object.keys(dirMap).forEach((dir) => {
   files.forEach((file) => {
     const fileName = file.replace('.svg', '')
     const svgElement = readFileSync(`./node_modules/bootstrap-icons/${dir}/${file}`, 'utf-8')
+    const componentScript = readFileSync('./ComponentScript.astro', 'utf-8')
     const svgIcon = svgElement.replace(/class="[^"]*"/, '{...Astro.props}')
+
     writeFileSync(`${outDir}/${fileName}.astro`, `${componentScript}\n${svgIcon}\n`)
   })
 })
