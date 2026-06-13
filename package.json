@@ -1,6 +1,6 @@
 {
   "name": "astro-bootstrap-icons",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Bootstrap Icons for Astro",
   "files": [
     "dist/"
