@@ -34,11 +34,11 @@ bun add astro-bootstrap-icons
 
 Import icon components to your project without any configuration.
 
-**Example of** `icons/bootstrap`:
+**Example of** `bootstrap`:
 
 ```astro
 ---
-import Bootstrap from 'astro-bootstrap-icons/icons/bootstrap.astro'
+import Bootstrap from 'astro-bootstrap-icons/bootstrap.astro'
 ---
 
 <Bootstrap />
@@ -46,11 +46,11 @@ import Bootstrap from 'astro-bootstrap-icons/icons/bootstrap.astro'
 
 Add any HTML attributes to icon components for modifying.
 
-**Example of** `icons/bootstrap-fill`:
+**Example of** `bootstrap-fill`:
 
 ```astro
 ---
-import BootstrapFill from 'astro-bootstrap-icons/icons/bootstrap-fill.astro'
+import BootstrapFill from 'astro-bootstrap-icons/bootstrap-fill.astro'
 ---
 
 <BootstrapFill class="any-class" aria-hidden="true" aria-label="Bootstrap" />
