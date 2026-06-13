@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- Not available
+- Add Vitest for testing icon components
 
 ## [1.0.3] - 2026-06-13
 
