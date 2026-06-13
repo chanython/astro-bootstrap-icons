@@ -3,10 +3,11 @@
   "version": "1.0.1",
   "description": "Bootstrap Icons for Astro",
   "files": [
-    "icons/",
-    "LICENSE",
-    "README.md"
+    "dist/"
   ],
+  "exports": {
+    "./*": "./dist/*.astro"
+  },
   "scripts": {
     "build": "node index.js"
   },
