@@ -38,7 +38,7 @@ Import icon components to your project without any configuration.
 
 ```astro
 ---
-import Bootstrap from 'astro-bootstrap-icons/bootstrap.astro'
+import Bootstrap from 'astro-bootstrap-icons/bootstrap'
 ---
 
 <Bootstrap />
@@ -50,7 +50,7 @@ Add any HTML attributes to icon components for modifying.
 
 ```astro
 ---
-import BootstrapFill from 'astro-bootstrap-icons/bootstrap-fill.astro'
+import BootstrapFill from 'astro-bootstrap-icons/bootstrap-fill'
 ---
 
 <BootstrapFill class="any-class" aria-hidden="true" aria-label="Bootstrap" />
