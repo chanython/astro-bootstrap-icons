@@ -30,7 +30,10 @@ Object.keys(dirMap).forEach((dir) => {
     const fileName = file.replace('.svg', '')
     const svgElement = readFileSync(`./node_modules/bootstrap-icons/${dir}/${file}`, 'utf-8')
     const componentScript = readFileSync('./ComponentScript.astro', 'utf-8')
-    const svgIcon = svgElement.replace(/class="[^"]*"/, '{...Astro.props}')
+
+    const removeClass = svgElement.replace(/class="[^"]*"/, '')
+    const trimRemovedClass = removeClass.replace(/\s{2,}/, ' ')
+    const svgIcon = trimRemovedClass.replace(/<svg([^>]*)>/, `<svg {...Astro.props}$1>`)
 
     writeFileSync(`${outDir}/${fileName}.astro`, `${componentScript}\n${svgIcon}\n`)
   })
