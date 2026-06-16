@@ -9,8 +9,8 @@
     "./*": "./dist/*.astro"
   },
   "scripts": {
-    "build": "node index.js",
-    "test": "vitest dist.test.js"
+    "build": "node index.ts",
+    "test": "vitest"
   },
   "repository": {
     "type": "git",
@@ -37,6 +37,7 @@
   },
   "homepage": "https://github.com/chanython/astro-bootstrap-icons#readme",
   "devDependencies": {
+    "@types/node": "^25.9.3",
     "astro": "^6.4.7",
     "bootstrap-icons": "^1.13.1",
     "vitest": "^4.1.9"
