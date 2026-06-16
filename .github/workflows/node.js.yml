@@ -29,6 +29,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'pnpm'
+    - run: pnpm approve-builds --all
     - run: pnpm ci
     - run: pnpm run build --if-present
     - run: pnpm test
