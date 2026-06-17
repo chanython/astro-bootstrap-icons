@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added Vitest for testing icon components.
 - Changed project from JavaScript to TypeScript.
-- Fixed some default SVG attributes that cannot be overridden, caused by the order of `...{Astro.props}` is after them.
+- Fixed some default SVG attributes that cannot be overridden, caused by the order of `{...Astro.props}` is after them.
 - Improved `README.md` documentation.
 
 ## [1.0.3] - 2026-06-13
