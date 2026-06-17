@@ -8,7 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 - Add Vitest for testing icon components
-- Reorder `{...Astro.props}` as first group attributes of the SVG element
+- Change project from JavaScript to TypeScript
+- Fix some default SVG attributes that cannot be overridden, caused by the order of `...{Astro.props}` is after them
+- Improve `README.md` documentation
 
 ## [1.0.3] - 2026-06-13
 
