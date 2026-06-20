@@ -1,12 +1,13 @@
 {
   "name": "astro-bootstrap-icons",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Bootstrap Icons for Astro",
   "files": [
     "dist/"
   ],
   "exports": {
-    "./*": "./dist/*.astro"
+    ".": "./dist/index.js",
+    "./*": "./dist/icons/*.astro"
   },
   "scripts": {
     "build": "node index.ts",
@@ -38,8 +39,10 @@
   "homepage": "https://github.com/chanython/astro-bootstrap-icons#readme",
   "devDependencies": {
     "@types/node": "^25.9.3",
-    "astro": "^6.4.7",
+    "@types/pascalcase": "^1.0.3",
+    "astro": "^6.4.8",
     "bootstrap-icons": "^1.13.1",
+    "pascalcase": "^2.0.0",
     "vitest": "^4.1.9"
   }
 }
