@@ -1,7 +1,7 @@
 # Astro Bootstrap Icons
 
 ![NPM Version](https://img.shields.io/npm/v/astro-bootstrap-icons)
-![NPM Downloads](https://img.shields.io/npm/dw/astro-bootstrap-icons)
+![NPM Downloads](https://img.shields.io/npm/d18m/astro-bootstrap-icons)
 ![NPM License](https://img.shields.io/npm/l/astro-bootstrap-icons)
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/chanython/astro-bootstrap-icons/node.js.yml)
 
@@ -43,14 +43,21 @@ bun add astro-bootstrap-icons
 
 Import icon components to your project without any configuration.
 
+**Notes**:
+
+- Recommend to add the prefix "Bi" before the icon name for individual imports, e.g., `<Bootstrap />` to `<BiBootstrap />`.
+- Named destructuring imports must add the prefix "Bi" and the icon name in Pascal case.
+
+### Import an icon component as individual
+
 **Example of** `bootstrap`:
 
 ```astro
 ---
-import Bootstrap from 'astro-bootstrap-icons/bootstrap'
+import BiBootstrap from 'astro-bootstrap-icons/bootstrap'
 ---
 
-<Bootstrap />
+<BiBootstrap />
 ```
 
 **When compiled**:
@@ -62,18 +69,43 @@ import Bootstrap from 'astro-bootstrap-icons/bootstrap'
 </svg>
 ```
 
+### Import icon components as named destructuring
+
+**Example of** `0-circle` **and** `0-circle-fill`:
+
+```astro
+---
+import { Bi0Circle, Bi0CircleFill } from 'astro-bootstrap-icons'
 ---
 
-Add any HTML attributes to icon components for modifying.
+<Bi0Circle />
+<Bi0CircleFill />
+```
+
+**When compiled**:
+
+```xml
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+  <path d="M7.988 12.158c-1.851 0-2.941-1.57-2.941-3.99V7.84c0-2.408 1.101-3.996 2.965-3.996 1.857 0 2.935 1.57 2.935 3.996v.328c0 2.408-1.101 3.99-2.959 3.99M8 4.951c-1.008 0-1.629 1.09-1.629 2.895v.31c0 1.81.627 2.895 1.629 2.895s1.623-1.09 1.623-2.895v-.31c0-1.8-.621-2.895-1.623-2.895"/>
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8"/>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+  <path d="M8 4.951c-1.008 0-1.629 1.09-1.629 2.895v.31c0 1.81.627 2.895 1.629 2.895s1.623-1.09 1.623-2.895v-.31c0-1.8-.621-2.895-1.623-2.895"/>
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-8.012 4.158c1.858 0 2.96-1.582 2.96-3.99V7.84c0-2.426-1.079-3.996-2.936-3.996-1.864 0-2.965 1.588-2.965 3.996v.328c0 2.42 1.09 3.99 2.941 3.99"/>
+</svg>
+```
+
+### Add any HTML attributes to icon components
 
 **Example of** `bootstrap-fill`:
 
 ```astro
 ---
-import BootstrapFill from 'astro-bootstrap-icons/bootstrap-fill'
+import BiBootstrapFill from 'astro-bootstrap-icons/bootstrap-fill'
 ---
 
-<BootstrapFill class="any-class" aria-hidden="true" aria-label="Bootstrap" />
+<BiBootstrapFill class="any-class" aria-hidden="true" aria-label="Bootstrap" />
 ```
 
 **When compiled**:
