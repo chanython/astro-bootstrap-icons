@@ -1,18 +1,12 @@
-import {
-  existsSync,
-  mkdirSync,
-  readdirSync,
-  readFileSync,
-  rmSync,
-  writeFileSync
-} from 'fs'
+import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'fs'
+import pascalcase from 'pascalcase'
 
 interface DirMap {
   [key: string]: string
 }
 
 const dirMap: DirMap = {
-  icons: 'dist'
+  icons: 'dist/icons'
 }
 
 Object.keys(dirMap).forEach((dir) => {
@@ -36,3 +30,15 @@ Object.keys(dirMap).forEach((dir) => {
     writeFileSync(`${outDir}/${fileName}.astro`, `${componentScript}\n${svgIcon}\n`)
   })
 })
+
+const indexFileContent = Object.keys(dirMap)
+  .map((dir) => {
+    const files = readdirSync(`./${dirMap[dir]}`)
+
+    return files.map((file) => {
+      const fileName = file.replace('.astro', '')
+      return `export { default as Bi${pascalcase(fileName)} } from './icons/${fileName}.astro'`
+    }).join(`\n`)
+  })
+
+writeFileSync('./dist/index.js', `${indexFileContent}\n`)
