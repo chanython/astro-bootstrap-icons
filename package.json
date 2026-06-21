@@ -37,7 +37,7 @@
   },
   "homepage": "https://github.com/chanython/astro-bootstrap-icons#readme",
   "devDependencies": {
-    "@types/node": "^25.9.4",
+    "@types/node": "^26.0.0",
     "astro": "^6.4.8",
     "bootstrap-icons": "^1.13.1",
     "vitest": "^4.1.9"
