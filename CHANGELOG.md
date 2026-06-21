@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 - Improved `README.md` documentation.
-- Updated a new version of `astro` dependency.
+- Updated dependencies to latest versions.
 
 ## [1.1.0] - 2026-06-17
 
