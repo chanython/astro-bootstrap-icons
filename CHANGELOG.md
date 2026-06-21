@@ -7,7 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- Added named destructuring imports.
 - Improved `README.md` documentation.
 - Updated a new version of `astro` dependency.
 
