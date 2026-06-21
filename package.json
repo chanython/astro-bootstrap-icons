@@ -9,7 +9,7 @@
     "./*": "./dist/*.astro"
   },
   "scripts": {
-    "build": "node index.ts",
+    "build": "node ./src/index.ts",
     "test": "vitest"
   },
   "repository": {
