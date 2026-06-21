@@ -43,7 +43,7 @@ bun add astro-bootstrap-icons
 
 Import icon components to your project without any configuration.
 
-**Note**: Recommend to add the prefix "Bi" before the icon name for individual imports, e.g., `<Bootstrap />` to `<BiBootstrap />`.
+**Note**: Recommend to add the prefix "Bi" before the icon name, e.g., `<Bootstrap />` to `<BiBootstrap />`.
 
 ### Import an icon component
 
