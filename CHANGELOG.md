@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.1] - 2026-06-22
+
+- Improved `README.md` documentation.
+- Updated dependencies to latest versions.
+
 ## [1.1.0] - 2026-06-17
 
 - Added Vitest for testing icon components.

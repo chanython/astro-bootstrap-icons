@@ -1,7 +1,7 @@
 # Astro Bootstrap Icons
 
 ![NPM Version](https://img.shields.io/npm/v/astro-bootstrap-icons)
-![NPM Downloads](https://img.shields.io/npm/dw/astro-bootstrap-icons)
+![NPM Downloads](https://img.shields.io/npm/d18m/astro-bootstrap-icons)
 ![NPM License](https://img.shields.io/npm/l/astro-bootstrap-icons)
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/chanython/astro-bootstrap-icons/node.js.yml)
 
@@ -43,14 +43,22 @@ bun add astro-bootstrap-icons
 
 Import icon components to your project without any configuration.
 
+### Guides
+
+- Icon component names being imported should have the prefix "Bi" (whatever) and the icon name in Pascal case, e.g., `<BiAlarmFill />`, `<BiBootstrap />`, `<BiToggleOn />`, etc.
+- Importing path follow with package and icon names in Kebab case, e.g., `astro-bootstrap-icons/alarm-fill`.
+- There are some icons that start with a digit that are against naming rules for JavaScript and TypeScript; add the prefix "Bi" (whatever) before the icon name, e.g., `<0Circle />` to `<Bi0Circle />`.
+
+### Import an icon component
+
 **Example of** `bootstrap`:
 
 ```astro
 ---
-import Bootstrap from 'astro-bootstrap-icons/bootstrap'
+import BiBootstrap from 'astro-bootstrap-icons/bootstrap'
 ---
 
-<Bootstrap />
+<BiBootstrap />
 ```
 
 **When compiled**:
@@ -62,18 +70,16 @@ import Bootstrap from 'astro-bootstrap-icons/bootstrap'
 </svg>
 ```
 
----
-
-Add any HTML attributes to icon components for modifying.
+### Add any HTML attributes to icon components
 
 **Example of** `bootstrap-fill`:
 
 ```astro
 ---
-import BootstrapFill from 'astro-bootstrap-icons/bootstrap-fill'
+import BiBootstrapFill from 'astro-bootstrap-icons/bootstrap-fill'
 ---
 
-<BootstrapFill class="any-class" aria-hidden="true" aria-label="Bootstrap" />
+<BiBootstrapFill class="any-class" aria-hidden="true" aria-label="Bootstrap" />
 ```
 
 **When compiled**:
