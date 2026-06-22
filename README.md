@@ -15,25 +15,25 @@ Astro Bootstrap Icons is an icon component package which made from [Bootstrap Ic
 
 Install `astro-bootstrap-icons` follow your package manager.
 
-**NPM**:
+NPM:
 
 ```sh
 npm install astro-bootstrap-icons
 ```
 
-**Yarn**:
+Yarn:
 
 ```sh
 yarn add astro-bootstrap-icons
 ```
 
-**PNPM**:
+PNPM:
 
 ```sh
 pnpm add astro-bootstrap-icons
 ```
 
-**Bun**:
+Bun:
 
 ```sh
 bun add astro-bootstrap-icons
@@ -51,7 +51,7 @@ Import icon components to your project without any configuration.
 
 ### Import an icon component
 
-**Example of** `bootstrap`:
+Example of `bootstrap`:
 
 ```astro
 ---
@@ -61,7 +61,7 @@ import BiBootstrap from 'astro-bootstrap-icons/bootstrap'
 <BiBootstrap />
 ```
 
-**When compiled**:
+When compiled:
 
 ```xml
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -72,7 +72,7 @@ import BiBootstrap from 'astro-bootstrap-icons/bootstrap'
 
 ### Add any HTML attributes to icon components
 
-**Example of** `bootstrap-fill`:
+Example of `bootstrap-fill`:
 
 ```astro
 ---
@@ -82,7 +82,7 @@ import BiBootstrapFill from 'astro-bootstrap-icons/bootstrap-fill'
 <BiBootstrapFill class="any-class" aria-hidden="true" aria-label="Bootstrap" />
 ```
 
-**When compiled**:
+When compiled:
 
 ```xml
 <svg class="any-class" aria-hidden="true" aria-label="Bootstrap" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
