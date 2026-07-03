@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Updated dependencies to latest versions.
+
 ## [1.1.2] - 2026-06-22
 
 - Fixed `README.md` documentation format texts on the npmjs website.
