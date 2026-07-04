@@ -1,5 +1,8 @@
 {
   "files.autoSave": "afterDelay",
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "EditorConfig.EditorConfig"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  }
 }
