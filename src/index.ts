@@ -5,7 +5,7 @@ interface DirMap {
 }
 
 const dirMap: DirMap = {
-  icons: 'dist'
+  icons: 'dist',
 }
 
 Object.keys(dirMap).forEach((dir) => {

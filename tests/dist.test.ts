@@ -28,7 +28,7 @@ describe('Test the Astro Bootstrap Icons', () => {
       props: {
         class: 'test-class',
         'aria-hidden': 'true',
-        'aria-label': 'Test Icon'
+        'aria-label': 'Test Icon',
       }
     })
 
