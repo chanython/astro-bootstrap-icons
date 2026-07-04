@@ -20,7 +20,7 @@ Object.keys(dirMap).forEach((dir) => {
   files.forEach((file) => {
     const fileName = file.replace('.svg', '')
     const svgElement = readFileSync(`./node_modules/bootstrap-icons/${dir}/${file}`, 'utf-8')
-    const componentScript = readFileSync('./src/components/ComponentScript.astro', 'utf-8')
+    const componentScript = readFileSync('./src/components/component-script.astro', 'utf-8')
 
     const removeClass = svgElement.replace(/class="[^"]*"/, '')
     const trimRemovedClass = removeClass.replace(/\s{2,}/, ' ')
