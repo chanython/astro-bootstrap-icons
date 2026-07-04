@@ -29,7 +29,7 @@ describe('Test the Astro Bootstrap Icons', () => {
         class: 'test-class',
         'aria-hidden': 'true',
         'aria-label': 'Test Icon',
-      }
+      },
     })
 
     expect(result).toContain('class="test-class"')
