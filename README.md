@@ -4,6 +4,7 @@
 ![NPM Downloads](https://img.shields.io/npm/d18m/astro-bootstrap-icons)
 ![NPM License](https://img.shields.io/npm/l/astro-bootstrap-icons)
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/chanython/astro-bootstrap-icons/node.js.yml)
+![Bootstrap Icons](https://img.shields.io/badge/bootstrap_icons-v1.13.1-purple)
 
 Astro Bootstrap Icons is an icon component package which made from [Bootstrap Icons](https://icons.getbootstrap.com/) for using with [Astro](https://astro.build/) project.
 

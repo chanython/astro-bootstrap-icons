@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Added badge of Bootstrap Icons' version on `README.md`.
 - Updated dependencies to latest versions.
 
 ## [1.1.2] - 2026-06-22
