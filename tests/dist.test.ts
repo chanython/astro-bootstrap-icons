@@ -1,7 +1,7 @@
 import { experimental_AstroContainer as AstroContainer } from 'astro/container'
 import { describe, expect, test } from 'vitest'
 
-import Icon from './../../dist/0-circle-fill.astro' // Adjust the file path as wanted
+import Icon from './../dist/bootstrap.astro' // Adjust the file path as wanted
 
 describe('Test the Astro Bootstrap Icons', () => {
   test('Render the SVG element', async () => {
@@ -28,8 +28,8 @@ describe('Test the Astro Bootstrap Icons', () => {
       props: {
         class: 'test-class',
         'aria-hidden': 'true',
-        'aria-label': 'Test Icon'
-      }
+        'aria-label': 'Test Icon',
+      },
     })
 
     expect(result).toContain('class="test-class"')

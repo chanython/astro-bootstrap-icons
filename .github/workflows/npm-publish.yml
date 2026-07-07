@@ -5,7 +5,9 @@ name: Node.js Package
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ['main']
+    tags:
+      - 'v*'
 
 permissions:
   id-token: write
@@ -13,19 +15,18 @@ permissions:
 
 jobs:
   publish:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v6
-    - uses: pnpm/action-setup@v6
-      with:
-        version: 11
-    - uses: actions/setup-node@v6
-      with:
-        node-version: '24.x'
-        registry-url: 'https://registry.npmjs.org'
-        package-manager-cache: false
-    - run: pnpm ci
-    - run: pnpm run build --if-present
-    - run: npm publish --provenance
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 11
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24.x'
+          registry-url: 'https://registry.npmjs.org'
+          package-manager-cache: false
+      - run: pnpm ci
+      - run: pnpm run build --if-present
+      - run: npm publish --provenance
