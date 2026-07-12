@@ -7,7 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Added technical information on `README.md`.
+- Updated dependencies to latest versions.
+
 ## [1.1.4] - 2026-07-07
+
+- Added badge of Bootstrap Icons' version on `README.md`.
+- Updated dependencies to latest versions.
+
+## [1.1.3] - 2026-07-07
+
+*Unpublished for technical problems.*
 
 - Added badge of Bootstrap Icons' version on `README.md`.
 - Updated dependencies to latest versions.
@@ -38,8 +48,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.1] - 2026-06-12
 
+*Unpublished for technical problems.*
+
 - Fixed keywords in `package.json` for integration library.
 
 ## [1.0.0] - 2026-06-12
+
+*Unpublished for technical problems.*
 
 - Initial release of `astro-bootstrap-icons`.
