@@ -98,7 +98,7 @@ When compiled:
 
 ## Technical information
 
-Icon customization works from `{...props}`, meaning that any HTML attributes can be added or overridden. However, this `astro-bootstrap-icons` package differs from the original version by removing the class named `bi`, as well as `bi-{iconName}`, so that the results are not tied to Bootstrap's predefined styles by those classes.
+Icon customization works from `{...props}` and default attributes, meaning that any HTML attributes can be added or overridden. However, this `astro-bootstrap-icons` package differs from the original version by removing the class named `bi`, as well as `bi-{iconName}`, so that the results are not tied to Bootstrap's predefined styles by those classes.
 
 Code sample on `dist/[icon-name].astro`:
 
