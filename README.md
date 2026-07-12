@@ -96,6 +96,18 @@ When compiled:
 
 [Explore icon names for more information](https://icons.getbootstrap.com/sprite/).
 
+## Technical information
+
+Icon customization works from `{...Astro.props}`, meaning that any HTML attributes can be added or edited. However, this `astro-bootstrap-icons` package differs from the original version by removing the class named `bi`, as well as `bi-{iconName}`, so that the results are not tied to Bootstrap's predefined styles by those classes.
+
+Code sample on `dist/[icon-name].astro`:
+
+```astro
+<svg {...Astro.props} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+  {/* paths */}
+</svg>
+```
+
 ## License
 
 [MIT](LICENSE)
