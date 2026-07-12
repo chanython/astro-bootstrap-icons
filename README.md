@@ -98,12 +98,26 @@ When compiled:
 
 ## Technical information
 
-Icon customization works from `{...Astro.props}`, meaning that any HTML attributes can be added or overridden. However, this `astro-bootstrap-icons` package differs from the original version by removing the class named `bi`, as well as `bi-{iconName}`, so that the results are not tied to Bootstrap's predefined styles by those classes.
+Icon customization works from `{...props}`, meaning that any HTML attributes can be added or overridden. However, this `astro-bootstrap-icons` package differs from the original version by removing the class named `bi`, as well as `bi-{iconName}`, so that the results are not tied to Bootstrap's predefined styles by those classes.
 
 Code sample on `dist/[icon-name].astro`:
 
 ```astro
-<svg {...Astro.props} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+---
+import type { HTMLAttributes } from 'astro/types'
+
+export interface Props extends HTMLAttributes<'svg'> {
+  xmlns?: string | null
+  width?: string | number | null
+  height?: string | number | null
+  fill?: string | null
+  viewBox?: string | null
+}
+
+const { xmlns, width, height, fill, viewBox, ...props }: Props = Astro.props
+---
+
+<svg {...props} xmlns={xmlns ?? "http://www.w3.org/2000/svg"} width={width ?? 16} height={height ?? 16} fill={fill ?? "currentColor"} viewBox={viewBox ?? "0 0 16 16"}>
   {/* paths */}
 </svg>
 ```
