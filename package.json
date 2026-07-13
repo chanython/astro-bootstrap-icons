@@ -1,12 +1,14 @@
 {
   "name": "astro-bootstrap-icons",
-  "version": "1.1.5",
+  "version": "1.2.0",
   "description": "Bootstrap Icons for Astro",
   "files": [
     "dist/"
   ],
   "exports": {
-    "./*": "./dist/*.astro"
+    "./*": "./dist/*.astro",
+    "./assets/*.css": "./dist/assets/*.css",
+    "./assets/*.scss": "./dist/assets/*.scss"
   },
   "scripts": {
     "dev": "astro dev",
