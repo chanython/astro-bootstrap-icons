@@ -1,4 +1,4 @@
-import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'fs'
+import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync, cpSync } from 'fs'
 
 interface DirMap {
   [key: string]: string
@@ -35,4 +35,6 @@ Object.keys(dirMap).forEach((dir) => {
 
     writeFileSync(`${outDir}/${fileName}.astro`, `${componentScript}\n${svgIcon}\n`)
   })
+
+  cpSync(`./src/assets/`, `./${outDir}/assets/`, { recursive: true })
 })
