@@ -71,7 +71,7 @@ When compiled:
 </svg>
 ```
 
-### Add any HTML attributes to icon components
+### Add any HTML attributes
 
 Example of `bootstrap-fill`:
 
