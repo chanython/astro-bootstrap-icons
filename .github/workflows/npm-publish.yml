@@ -19,7 +19,9 @@ jobs:
       - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v6
         with:
-          version: 11
+          version: '11.11.0'
+          # See issued at https://github.com/pnpm/action-setup/issues/276
+
       - uses: actions/setup-node@v6
         with:
           node-version: '24.x'
