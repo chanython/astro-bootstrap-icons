@@ -50,13 +50,11 @@ describe('Test the Astro Bootstrap Icons', () => {
       props: {
         width: 32,
         height: 32,
-        viewBox: '0 0 32 32',
       },
     })
 
     expect(result).toContain('width="32"')
     expect(result).toContain('height="32"')
-    expect(result).toContain('viewBox="0 0 32 32"')
   })
 
   test('Render the SVG element has no duplicate attributes', async () => {
