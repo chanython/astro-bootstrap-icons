@@ -92,13 +92,17 @@ When compiled:
 </svg>
 ```
 
+### Use with the Bootstrap framework
+
+Astro Bootstrap Icons package differs from the original version by removing the class named `bi`, as well as the prefixed `bi-` with icon names like `bi-bootstrap`, so that the results are not tied to Bootstrap's predefined styles by those classes. If you want to use Astro Bootstrap Icons with the Bootstrap framework, just add `bi` in the class attribute.
+
 ## Icons
 
 [Explore icon names for more information](https://icons.getbootstrap.com/sprite/).
 
 ## Technical information
 
-Icon customization works from Astro props, meaning that any HTML attributes can be added or overridden. However, this `astro-bootstrap-icons` package differs from the original version by removing the class named `bi`, as well as `bi-{iconName}`, so that the results are not tied to Bootstrap's predefined styles by those classes.
+Icon customization works from Astro props, meaning that any HTML attributes can be added or overridden.
 
 Code sample on `dist/[icon-name].astro`:
 
