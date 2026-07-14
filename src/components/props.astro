@@ -2,12 +2,8 @@
 import type { HTMLAttributes } from 'astro/types'
 
 export interface Props extends HTMLAttributes<'svg'> {
-  xmlns?: string | null
-  width?: string | number | null
-  height?: string | number | null
-  fill?: string | null
-  viewBox?: string | null
+  [key: string]: any
 }
 
-const { xmlns, width, height, fill, viewBox, ...props }: Props = Astro.props
+const { class: className, xmlns, width, height, fill, viewBox, ...rest }: Props = Astro.props
 ---
