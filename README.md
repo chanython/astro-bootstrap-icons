@@ -2,7 +2,7 @@
 
 [![NPM Version](https://img.shields.io/npm/v/astro-bootstrap-icons?label=Currently&logo=npm&logoColor=white)](https://www.npmjs.com/package/astro-bootstrap-icons)
 [![Bootstrap Icons](https://img.shields.io/badge/Icons-v1.13.1-purple?logo=bootstrap&logoColor=white&color=blueviolet)](https://blog.getbootstrap.com/2025/05/09/bootstrap-icons-1-12-1-13/)
-[![Node.js CI](https://github.com/chanython/astro-bootstrap-icons/actions/workflows/node.js.yml/badge.svg?branch=dev)](https://github.com/chanython/astro-bootstrap-icons/actions/workflows/node.js.yml)
+[![CI](https://github.com/chanython/astro-bootstrap-icons/actions/workflows/ci.yml/badge.svg)](https://github.com/chanython/astro-bootstrap-icons/actions/workflows/ci.yml)
 
 Astro Bootstrap Icons is an icon component package which made from [Bootstrap Icons](https://icons.getbootstrap.com/) for using with [Astro](https://astro.build/) project.
 
