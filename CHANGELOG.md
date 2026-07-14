@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- Added base CSS for using with the Bootstrap framework.
+- Added content for using with the Bootstrap framework on `README.md`.
 - Added technical information on `README.md`.
 - Fixed duplicate SVG attributes when overriding.
 - Updated dependencies to latest versions.
