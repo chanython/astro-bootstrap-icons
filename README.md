@@ -48,7 +48,7 @@ Import icon components to your project without any configuration.
 
 - Icon component names being imported should have the prefix "Bi" (whatever) and the icon name in Pascal case, e.g., `<BiAlarmFill />`, `<BiBootstrap />`, `<BiToggleOn />`, etc.
 - Importing path follow with package and icon names in Kebab case, e.g., `astro-bootstrap-icons/alarm-fill`.
-- There are some icons that start with a digit that are against naming rules for JavaScript and TypeScript; add the prefix "Bi" (whatever) before the icon name, e.g., `<0Circle />` to `<Bi0Circle />`.
+- There are some icons that start with a digit that violate naming rules for JavaScript and TypeScript; add the prefix "Bi" (whatever) before the icon name, e.g., `<0Circle />` to `<Bi0Circle />`.
 
 ### Import an icon component
 
@@ -126,7 +126,7 @@ CSS code:
 
 Icon customization works from Astro props, meaning that any HTML attributes can be added or overridden.
 
-Code sample on `dist/[icon-name].astro`:
+Code sample in `dist/[icon-name].astro`:
 
 ```astro
 ---
