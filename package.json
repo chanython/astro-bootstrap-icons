@@ -6,9 +6,7 @@
     "dist/"
   ],
   "exports": {
-    "./*": "./dist/*.astro",
-    "./assets/*.css": "./dist/assets/*.css",
-    "./assets/*.scss": "./dist/assets/*.scss"
+    "./*": "./dist/*.astro"
   },
   "scripts": {
     "dev": "astro dev",
