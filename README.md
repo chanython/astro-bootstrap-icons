@@ -96,18 +96,26 @@ When compiled:
 
 Astro Bootstrap Icons differs from the original version by removing the class named `bi`, as well as the prefixed `bi-` with icon names like `bi-bootstrap`, so that the results are not tied to Bootstrap's predefined styles by those classes.
 
-If you want to use Astro Bootstrap Icons with the Bootstrap framework, import `base.css` (or `base.scss` if you are using SASS) and add a class named `bi` to the icon component.
+If you want to use Astro Bootstrap Icons with the Bootstrap framework, add a class named `bi` to the icon component and CSS code in your stylesheet.
 
 Example of `bootstrap`:
 
 ```astro
 ---
-import 'astro-bootstrap-icons/assets/base.css'
-
 import BiBootstrap from 'astro-bootstrap-icons/bootstrap'
 ---
 
 <BiBootstrap class="bi" />
+```
+
+CSS code:
+
+```css
+.bi {
+  display: inline-block;
+  vertical-align: -.125em;
+  fill: currentColor;
+}
 ```
 
 ## Icons
