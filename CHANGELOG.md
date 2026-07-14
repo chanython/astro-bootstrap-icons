@@ -9,8 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Added content for use with the Bootstrap framework on `README.md`.
-- Added technical information on `README.md`.
+- Added content for use with the Bootstrap framework in `README.md`.
+- Added technical information in `README.md`.
 
 ### Fixed
 
@@ -28,7 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Added a badge of Bootstrap Icons' version on `README.md`.
+- Added a badge of Bootstrap Icons' version in `README.md`.
 
 ### Updated
 
