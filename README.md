@@ -131,17 +131,13 @@ Code sample in `dist/[icon-name].astro`:
 import type { HTMLAttributes } from 'astro/types'
 
 export interface Props extends HTMLAttributes<'svg'> {
-  xmlns?: string | null
-  width?: string | number | null
-  height?: string | number | null
-  fill?: string | null
-  viewBox?: string | null
+  [key: string]: any
 }
 
-const { xmlns, width, height, fill, viewBox, ...props }: Props = Astro.props
+const { class: className, xmlns, width, height, fill, viewBox, ...rest }: Props = Astro.props
 ---
 
-<svg {...props} xmlns={xmlns ?? "http://www.w3.org/2000/svg"} width={width ?? 16} height={height ?? 16} fill={fill ?? "currentColor"} viewBox={viewBox ?? "0 0 16 16"}>
+<svg class={className} {...rest} xmlns={xmlns ?? "http://www.w3.org/2000/svg"} width={width ?? 16} height={height ?? 16} fill={fill ?? "currentColor"} viewBox={viewBox ?? "0 0 16 16"}>
   {/* paths */}
 </svg>
 ```
