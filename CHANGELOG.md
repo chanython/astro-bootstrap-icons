@@ -16,6 +16,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Fixed duplicate SVG attributes when overriding.
 
+### Improved
+
+- Improved `README.md` documentation.
+
 ### Updated
 
 - Updated dependencies to the latest versions.
