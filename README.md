@@ -42,7 +42,7 @@ bun add astro-bootstrap-icons
 
 ## Usage
 
-Import icon components to your project without any configuration.
+This is how to import icon components.
 
 ### Guides
 
@@ -62,7 +62,7 @@ import BiBootstrap from 'astro-bootstrap-icons/bootstrap'
 <BiBootstrap />
 ```
 
-When compiled:
+Result:
 
 ```xml
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -83,7 +83,7 @@ import BiBootstrapFill from 'astro-bootstrap-icons/bootstrap-fill'
 <BiBootstrapFill class="any-class" aria-hidden="true" aria-label="Bootstrap" />
 ```
 
-When compiled:
+Result:
 
 ```xml
 <svg class="any-class" aria-hidden="true" aria-label="Bootstrap" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
