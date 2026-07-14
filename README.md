@@ -44,7 +44,7 @@ bun add astro-bootstrap-icons
 
 This is how to use icon components.
 
-### Guides
+### Import guide
 
 - Icon component names being imported should have the prefix "Bi" (whatever) and the icon name in Pascal case, e.g., `<BiAlarmFill />`, `<BiBootstrap />`, `<BiToggleOn />`, etc.
 - Importing path follow with package and icon names in Kebab case, e.g., `astro-bootstrap-icons/alarm-fill`.
