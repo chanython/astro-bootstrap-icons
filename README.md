@@ -42,7 +42,7 @@ bun add astro-bootstrap-icons
 
 ## Usage
 
-This is how to import icon components.
+This is how to use icon components.
 
 ### Guides
 
