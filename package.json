@@ -40,7 +40,7 @@
   "homepage": "https://github.com/chanython/astro-bootstrap-icons#readme",
   "devDependencies": {
     "@types/node": "^26.1.1",
-    "astro": "^7.0.7",
+    "astro": "^7.0.9",
     "bootstrap-icons": "^1.13.1",
     "tsx": "^4.23.1",
     "typescript": "^7.0.2",
