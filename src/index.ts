@@ -20,12 +20,18 @@ Object.keys(dirMap).forEach((dir) => {
   files.forEach((file) => {
     const fileName = file.replace('.svg', '')
     const svgElement = readFileSync(`./node_modules/bootstrap-icons/${dir}/${file}`, 'utf-8')
-    const componentScript = readFileSync('./src/components/component-script.astro', 'utf-8')
+    const propsScript = readFileSync('./src/components/props.astro', 'utf-8')
 
-    const removeClass = svgElement.replace(/class="[^"]*"/, '')
-    const trimRemovedClass = removeClass.replace(/\s{2,}/, ' ')
-    const svgIcon = trimRemovedClass.replace(/<svg([^>]*)>/, `<svg {...Astro.props}$1>`)
+    const removeAllAttrs = svgElement.replace(/<svg([^>]*)>/, '<svg>')
+    const classAttr = removeAllAttrs.replace(/<svg([^>]*)>/, `<svg$1 class={className}>`)
+    const restProps = classAttr.replace(/<svg([^>]*)>/, `<svg$1 {...rest}>`)
+    const xmlnsAttr = restProps.replace(/<svg([^>]*)>/, `<svg$1 xmlns={xmlns ?? "http://www.w3.org/2000/svg"}>`)
+    const widthAttr = xmlnsAttr.replace(/<svg([^>]*)>/, `<svg$1 width={width ?? 16}>`)
+    const heightAttr = widthAttr.replace(/<svg([^>]*)>/, `<svg$1 height={height ?? 16}>`)
+    const fillAttr = heightAttr.replace(/<svg([^>]*)>/, `<svg$1 fill={fill ?? "currentColor"}>`)
+    const viewBoxAttr = fillAttr.replace(/<svg([^>]*)>/, `<svg$1 viewBox={viewBox ?? "0 0 16 16"}>`)
+    const svgIcon = viewBoxAttr
 
-    writeFileSync(`${outDir}/${fileName}.astro`, `${componentScript}\n${svgIcon}\n`)
+    writeFileSync(`${outDir}/${fileName}.astro`, `${propsScript}\n${svgIcon}\n`)
   })
 })

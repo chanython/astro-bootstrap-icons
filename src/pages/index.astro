@@ -1,5 +1,26 @@
 ---
-import BiBootstrap from 'astro-bootstrap-icons/bootstrap'
+import BiBootstrapFill from 'astro-bootstrap-icons/bootstrap-fill'
 ---
 
-<BiBootstrap aria-hidden="true" aria-label="Bootstrap" style={{ width: '2rem', height: '2rem' }} />
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+  crossorigin="anonymous"
+/>
+
+<div class="container py-4 px-3 mx-auto">
+  <h1>Hello, Bootstrap and Astro!</h1>
+  <button class="btn btn-primary" aria-label="Bootstrap Icons">
+    <BiBootstrapFill class="bi" aria-hidden="true" />
+    &nbsp;Bootstrap Icons
+  </button>
+</div>
+
+<style>
+  .bi {
+    display: inline-block;
+    vertical-align: -0.125em;
+    fill: currentColor;
+  }
+</style>

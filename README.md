@@ -1,12 +1,11 @@
 # Astro Bootstrap Icons
 
-[![NPM Version](https://img.shields.io/npm/v/astro-bootstrap-icons)](https://www.npmjs.com/package/astro-bootstrap-icons)
-[![NPM Downloads](https://img.shields.io/npm/d18m/astro-bootstrap-icons)](https://www.npmjs.com/package/astro-bootstrap-icons)
-[![NPM License](https://img.shields.io/npm/l/astro-bootstrap-icons)](LICENSE)
-[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/chanython/astro-bootstrap-icons/node.js.yml)](https://github.com/chanython/astro-bootstrap-icons/actions/workflows/node.js.yml)
-[![Bootstrap Icons](https://img.shields.io/badge/bootstrap_icons-v1.13.1-purple)](https://blog.getbootstrap.com/2025/05/09/bootstrap-icons-1-12-1-13/)
+[![NPM Version](https://img.shields.io/npm/v/astro-bootstrap-icons?label=Currently&logo=npm&logoColor=white)](https://www.npmjs.com/package/astro-bootstrap-icons)
+[![Bootstrap Icons Version](https://img.shields.io/npm/dependency-version/astro-bootstrap-icons/dev/bootstrap-icons?logo=bootstrap&logoColor=white&label=Icons&color=blueviolet)](https://blog.getbootstrap.com/2025/05/09/bootstrap-icons-1-12-1-13/)
+[![CI](https://github.com/chanython/astro-bootstrap-icons/actions/workflows/ci.yml/badge.svg)](https://github.com/chanython/astro-bootstrap-icons/actions/workflows/ci.yml)
 
-Astro Bootstrap Icons is an icon component package which made from [Bootstrap Icons](https://icons.getbootstrap.com/) for using with [Astro](https://astro.build/) project.
+Astro Bootstrap Icons is an icon component package made from [Bootstrap Icons](https://icons.getbootstrap.com/)
+for use with the [Astro](https://astro.build/) project.
 
 ## Changelog
 
@@ -14,7 +13,7 @@ Astro Bootstrap Icons is an icon component package which made from [Bootstrap Ic
 
 ## Installation
 
-Install `astro-bootstrap-icons` follow your package manager.
+Install a package using your package manager.
 
 NPM:
 
@@ -42,13 +41,18 @@ bun add astro-bootstrap-icons
 
 ## Usage
 
-Import icon components to your project without any configuration.
+This is how to use icon components.
 
-### Guides
+### Import guide
 
-- Icon component names being imported should have the prefix "Bi" (whatever) and the icon name in Pascal case, e.g., `<BiAlarmFill />`, `<BiBootstrap />`, `<BiToggleOn />`, etc.
-- Importing path follow with package and icon names in Kebab case, e.g., `astro-bootstrap-icons/alarm-fill`.
-- There are some icons that start with a digit that are against naming rules for JavaScript and TypeScript; add the prefix "Bi" (whatever) before the icon name, e.g., `<0Circle />` to `<Bi0Circle />`.
+- Icon component names being imported should have the prefix "Bi" (whatever)
+  and the icon name in Pascal case, e.g., `<BiAlarmFill />`, `<BiBootstrap />`,
+  `<BiToggleOn />`, etc.
+- The import path follows the package name, a slash, and an icon name in Kebab case,
+  like `astro-bootstrap-icons/alarm-fill`.
+- There are some icons that start with a digit that violate naming rules for JavaScript
+  and TypeScript; add the prefix "Bi" (whatever) before the icon name,
+  like `<0Circle />` to `<Bi0Circle />`.
 
 ### Import an icon component
 
@@ -62,7 +66,7 @@ import BiBootstrap from 'astro-bootstrap-icons/bootstrap'
 <BiBootstrap />
 ```
 
-When compiled:
+Result:
 
 ```xml
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -71,7 +75,7 @@ When compiled:
 </svg>
 ```
 
-### Add any HTML attributes to icon components
+### Add any HTML attributes
 
 Example of `bootstrap-fill`:
 
@@ -83,7 +87,7 @@ import BiBootstrapFill from 'astro-bootstrap-icons/bootstrap-fill'
 <BiBootstrapFill class="any-class" aria-hidden="true" aria-label="Bootstrap" />
 ```
 
-When compiled:
+Result:
 
 ```xml
 <svg class="any-class" aria-hidden="true" aria-label="Bootstrap" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -92,9 +96,61 @@ When compiled:
 </svg>
 ```
 
+### Use with the Bootstrap framework
+
+Astro Bootstrap Icons differs from the original version by removing the class
+named `bi`, as well as the prefixed `bi-` with icon names like `bi-bootstrap`,
+so that the results are not tied to Bootstrap's predefined styles by those classes.
+
+If you want to use Astro Bootstrap Icons with the Bootstrap framework, add a class
+named `bi` to the icon component and the CSS code in your stylesheet.
+
+Example of `bootstrap`:
+
+```astro
+---
+import BiBootstrap from 'astro-bootstrap-icons/bootstrap'
+---
+
+<BiBootstrap class="bi" />
+```
+
+CSS code:
+
+```css
+.bi {
+  display: inline-block;
+  vertical-align: -0.125em;
+  fill: currentColor;
+}
+```
+
 ## Icons
 
 [Explore icon names for more information](https://icons.getbootstrap.com/sprite/).
+
+## Technical information
+
+Icon customization works from Astro props, meaning that any HTML attributes
+can be added or overridden.
+
+Code sample in `dist/[icon-name].astro`:
+
+```astro
+---
+import type { HTMLAttributes } from 'astro/types'
+
+export interface Props extends HTMLAttributes<'svg'> {
+  [key: string]: any
+}
+
+const { class: className, xmlns, width, height, fill, viewBox, ...rest }: Props = Astro.props
+---
+
+<svg class={className} {...rest} xmlns={xmlns ?? "http://www.w3.org/2000/svg"} width={width ?? 16} height={height ?? 16} fill={fill ?? "currentColor"} viewBox={viewBox ?? "0 0 16 16"}>
+  {/* paths */}
+</svg>
+```
 
 ## License
 

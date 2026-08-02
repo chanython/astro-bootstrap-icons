@@ -1,7 +1,7 @@
 # This workflow will publish a package to npmjs when a main branch pull request is merged
 # For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
 
-name: Node.js Package
+name: Publish
 
 on:
   push:
@@ -18,13 +18,11 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v6
-        with:
-          version: 11
       - uses: actions/setup-node@v6
         with:
-          node-version: '24.x'
+          node-version: 'lts/*'
           registry-url: 'https://registry.npmjs.org'
           package-manager-cache: false
       - run: pnpm ci
       - run: pnpm run build --if-present
-      - run: npm publish --provenance
+      - run: pnpm publish --provenance

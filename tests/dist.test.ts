@@ -43,4 +43,31 @@ describe('Test the Astro Bootstrap Icons', () => {
 
     expect(result).toMatch(/<path[^>]*d="[^"]+"[^>]*>/)
   })
+
+  test('Render the some SVG attributes are overridden', async () => {
+    const container = await AstroContainer.create()
+    const result = await container.renderToString(Icon, {
+      props: {
+        width: 32,
+        height: 32,
+      },
+    })
+
+    expect(result).toContain('width="32"')
+    expect(result).toContain('height="32"')
+  })
+
+  test('Render the SVG element has no duplicate attributes', async () => {
+    const container = await AstroContainer.create()
+    const result = await container.renderToString(Icon)
+
+    const attrNames = Array.from(result.matchAll(/<svg\s+([^>]*)>/g)).flatMap((match) => {
+      const attrs = match[1].trim().split(/\s+/)
+      return attrs.map((attr) => attr.split('=')[0])
+    })
+
+    const uniqueAttrNames = new Set(attrNames)
+
+    expect(attrNames.length).toBe(uniqueAttrNames.size)
+  })
 })
